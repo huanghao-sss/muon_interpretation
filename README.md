@@ -1,22 +1,19 @@
 # muon_interpretation
 
-Muon 优化器分阶段线性网络实验：比较 Muon 与 SGD 在 Phase 1 训练中的 trade-off。
+Staged linear-network experiments for interpreting the Muon optimizer and comparing its Phase 1 trade-off against SGD.
 
-## 文件说明
+## Repository Layout
 
-- `Chinese/` — 中文版 notebook
-- `English/` — 英文版 notebook
+- `Chinese/` - Chinese notebooks
+- `English/` - English notebooks
 
-两个目录都包含同一组 notebook：
+Both folders contain the same set of notebooks:
 
-- `demo_muon_tradeoff.ipynb` — 分阶段实验（Phase1 anchor + Phase2 compose）
-- `demo_muon_tradeoff.executed.ipynb` — 分阶段实验已执行版本（含输出）
-- `demo_muon_tradeoff_tau.ipynb` — τ 调度实验（联合训练 ↔ 段交替）
-- `demo_muon_tradeoff_tau.executed.ipynb` — τ 调度实验已执行版本（含输出）
+- `demo_muon_tradeoff.ipynb` - staged experiment with a Phase 1 anchor objective and Phase 2 composition objective
+- `demo_muon_tradeoff.executed.ipynb` - executed version of the staged experiment, including outputs
+- `demo_muon_tradeoff_tau.ipynb` - tau-scheduling experiment comparing joint training and alternating segments
+- `demo_muon_tradeoff_tau.executed.ipynb` - executed version of the tau-scheduling experiment, including outputs
 
-## English
+## Notes
 
-Muon staged linear-network experiments comparing the trade-off between Muon and SGD in Phase 1 training.
-
-- `Chinese/` — Chinese notebooks
-- `English/` — English notebooks
+The English notebooks keep the same code, outputs, and figures as the Chinese originals. Only the explanatory Markdown text has been translated.
