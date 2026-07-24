@@ -13,7 +13,7 @@ Thus predicted_ratio < 1 is certified by
 
   prefix_penalty < total_gain.
 
-This file formalizes the log-domain algebra.  The real-analysis facts about
+This file formalizes the log-domain algebra. The real-analysis facts about
 log and exp are standard; using this log form avoids a heavy Mathlib cache
 dependency while still machine-checking the decision rule used by the notebooks.
 -/
@@ -46,14 +46,3 @@ theorem positive_rate_improves_first_order_loss
     firstOrderLossRatio rho < 1 := by
   unfold firstOrderLossRatio
   omega
-
-def pointwiseImproves {n : Nat} (penalty gain : Fin n -> Int) : Prop :=
-  forall t : Fin n, logPredictedRatio (penalty t) (gain t) < 0
-
-theorem adjustment_method_pointwise_improves
-    {n : Nat}
-    {penalty gain : Fin n -> Int}
-    (hcert : forall t : Fin n, penalty t < gain t) :
-    pointwiseImproves penalty gain := by
-  intro t
-  exact log_tradeoff_certificate (hcert t)
